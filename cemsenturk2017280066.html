@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title> CEM ÞENTÜRK 2017280066</title>
+<h2>Cem ÞENTÜRK 2017280066</h2>
+<label for="id1">Metin kutusu 1</label>
+<input type='number' id='id1' /> 
+<br>
+<label for="id2">Metin kutusu 2</label>
+<input type='number'id='id2' /> 
+<br><br>
+<button type="button" id="btnTopla" value="TOPLA">Topla</button>
+<br><br>
+<div id="kutuToplam"></div>
+
+        <script>
+function sayiKontrol(event)
+
+{
+
+if(event.keyCode != 8 && event.keyCode != 0 && (event.keyCode < 48 || event.keyCode > 57))
+
+return false;
+
+var frm = document.getElementById(“sayisal_form”);
+
+orm.setAttribute(“onsubmit”, true);
+
+return true;
+
+}
+ </script>
+<script>
+            var btn=document.getElementById("btnTopla");
+            btn.onclick=function(){
+                var s1=Number(document.getElementById("id1").value);
+                var s2=Number(document.getElementById("id2").value);
+                var toplam=s1+s2;
+                document.getElementById("kutuToplam").text=alert(+toplam);
+            }
+        </script>
+<label for="id3">Metin kutusu 3</label>
+<input type='text' id='id3' /> 
+<br>
+<label for="id4">Metin kutusu 4</label>
+<input type='text' id='id4' /> 
+<br><br>
+<button type="button" id="btnBirleþtir">Yapýþtýr</button>
+<h2 id="kutuBirleþtir"></h2>
+
+<script>
+var btn=document.getElementById("btnBirleþtir");
+            btn.onclick=function(){
+                var s3=String(document.getElementById("id3").value);
+                var s4=String(document.getElementById("id4").value);
+                var birleþtir = s3.concat(s4);
+document.getElementById("kutuBirleþtir").text=alert(birleþtir);
+ 
+ }
+       </script>          
+</body>
+</html>
